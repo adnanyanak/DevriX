@@ -1,0 +1,102 @@
+$accent-color: #D24545
+
+$breakpoint-sm: 576px
+$breakpoint-md: 767px
+$breakpoint-xmd: 992px
+$breakpoint-xxmd: 1365px
+$breakpoint-lg: 1366px
+$breakpoint-xl: 1367px
+$breakpoint-xxl: 1920px
+
+@mixin sm-devices
+   @media (max-width: #{$breakpoint-sm})
+       @content
+
+@mixin md-devices
+   @media (max-width: #{$breakpoint-md})
+       @content
+
+@mixin md--xmd-devices
+   @media (min-width: #{$breakpoint-md}) and (max-width: #{$breakpoint-xmd})
+       @content
+
+@mixin xmd-devices
+   @media (max-width: #{$breakpoint-xmd})
+       @content
+
+@mixin xmd--xxmd-devices
+   @media (min-width: #{$breakpoint-xmd}) and (max-width: #{$breakpoint-xxmd})
+       @content
+
+@mixin xxmd-devices
+   @media (min-width: #{$breakpoint-xxmd})
+       @content
+
+@mixin xxmd-devices-lower
+   @media (max-width: #{$breakpoint-xxmd})
+       @content
+
+@mixin lg-devices
+   @media (max-width: #{$breakpoint-lg})
+       @content
+
+@mixin xl-devices
+   @media (min-width: #{$breakpoint-xl})
+       @content
+
+@mixin xxl-devices
+   @media (min-width: #{$breakpoint-xxl})
+       @content
+
+html,body
+    width: 100%
+    height: 100%
+    position: relative
+    padding: 0
+    margin: 0
+    height: 100%
+    font-weight: 400
+    background: #ffffff
+    -webkit-font-smoothing: antialiased
+    font-family: 'Roboto', sans-serif
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    overflow-x: hidden
+
+
+a, abbr, acronym, address, applet, b, big, blockquote, body, caption, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, table, tbody, td, tfoot, th, thead, tr, tt, ul, var
+    margin: 0
+    padding: 0
+    border: 0
+    outline: 0
+    font-style: inherit
+    font-size: 100%
+    text-decoration: none
+    vertical-align: baseline
+    -webkit-box-sizing: border-box
+    -moz-box-sizing: border-box
+    box-sizing: border-box
+    -webkit-touch-callout: none
+    -webkit-user-select: none
+    -khtml-user-select: none
+    -moz-user-select: none
+    -ms-user-select: none
+    user-select: none
+    color: inherit
+
+dd
+    height: 12px
+    width: 1px
+    background: #dddddd
+    float: left
+    @include xmd-devices
+        display: none
+
+.pr-40
+    padding-right: 40px
+
+.mt-40
+    margin-top: 40px
+
+      
